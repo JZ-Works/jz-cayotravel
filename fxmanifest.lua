@@ -1,9 +1,8 @@
 name 'jz-cayotravel'
-author 'jamazzz'
-description 'A Cayo Perico Heist script for FiveM by jamazzz'
+author 'jz-works'
+description 'A Cayo Perico QOL Script'
 fx_version 'cerulean'
 game 'gta5'
-lua54 'yes'
 
 shared_scripts {
     '@qb-core/shared/locale.lua',

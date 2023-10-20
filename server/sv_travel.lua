@@ -150,3 +150,15 @@ QBCore.Functions.CreateCallback('jz-cayotravel:server:payTrip', function(source,
         cb(false)
     end
 end)
+
+QBCore.Functions.CreateCallback('jz-cayotravel:server:payrent', function(source, cb,amount)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveMoney('cash', amount) then
+        TriggerClientEvent('QBCore:Notify', src, Lang:t('success.paid_rental', {price = amount}), 'success')
+        cb(true)
+    else
+        TriggerClientEvent('QBCore:Notify', src, Lang:t('error.not_enough_cash_rental'), 'error')
+        cb(false)
+    end
+end)
